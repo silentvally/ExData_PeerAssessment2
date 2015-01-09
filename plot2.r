@@ -9,9 +9,9 @@ plot2 <- function(nPM)
   #{
   #  s2[i] <- sum(nPM$Emission[nPM$year == m[i]])
   #}
-  attach(PM25)
+  attach(nPM)
   s2 <- tapply(Emissions, list(year), sum)
-  detach(PM25)
+  detach(nPM)
   plot(y,s2,xlab="year",ylab="Emission", main="Emission in Baltimore City",type="l")
   dev.off()
 }
